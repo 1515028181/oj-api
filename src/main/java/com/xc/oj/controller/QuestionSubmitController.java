@@ -32,7 +32,7 @@ import javax.servlet.http.HttpServletRequest;
  * @from oj
  */
 @RestController
-@RequestMapping("/question_submit")
+@RequestMapping("/question/question_submit")
 @Slf4j
 public class QuestionSubmitController {
 
@@ -49,7 +49,7 @@ public class QuestionSubmitController {
      * @param request
      * @return resultNum 本次题目提交变化数
      */
-    @PostMapping("/")
+    @PostMapping("/do")
     public BaseResponse<Long> doThumb(@RequestBody QuestionSubmitAddRequest questionSubmitAddRequest,
             HttpServletRequest request) {
         if (questionSubmitAddRequest == null || questionSubmitAddRequest.getQuestionId() <= 0) {

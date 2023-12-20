@@ -78,6 +78,7 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
         questionSubmit.setLanguage(language);
         questionSubmit.setCode(code);
         questionSubmit.setUserId(userId);
+        questionSubmit.setQuestionId(questionId);
         //设置判题状态
         questionSubmit.setStatus(QuestionSubmitEnum.WAITING.getValue());
         questionSubmit.setJudgeInfo("{}");
